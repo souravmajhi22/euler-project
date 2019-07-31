@@ -1,3 +1,4 @@
+// program:Summation of primes
 public class Problem_10
 {
 	public static boolean primecheck(long n)
