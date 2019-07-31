@@ -1,3 +1,4 @@
+// program:10001st prime
 public class Problem_7 
 {
 	public static void main(String[] args)
