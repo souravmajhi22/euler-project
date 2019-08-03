@@ -3,16 +3,16 @@ public class Problem_10
 {
 	public static boolean primecheck(long n)
     {
-        boolean result = true;
-        for (int i = 3; i<=Math.sqrt(n);i+=2)
+        int c=0;
+      for (int i = 1; i<=n;i++)
         {
             if (n%i==0)
-            {
-                result=false;
-                break;
-            }
+              	c++;
         }
-        return result;
+        if(c==2)
+        return true;
+        else 
+        return false;
     }
     public static void main(String args[])
     {
@@ -28,3 +28,4 @@ public class Problem_10
         System.out.println(sum+2); //because 2 is not included
    }
 }
+//output : 142913828922
