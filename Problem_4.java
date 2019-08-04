@@ -16,9 +16,9 @@ public class Problem_4
 	{
 		int  p;
 		int m=0;
-			for(int i=100;i<=999;i++)
+			for(int i=999;i>=100;i--)
 			{
-				for(int j=i;j<=999;j++)
+				for(int j=i;j>=100;j--)
 				{
 					p=i*j;
 					int k=reverse(p);
