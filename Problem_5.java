@@ -1,27 +1,26 @@
 // program: Smallest multiple
 public class Problem_5 
 {
+	static long findgcd(long x,long y)
+	 {
+		 if(x%y!=0)
+			 return findgcd(y,x%y);
+		 else 
+			 return y;
+	 }
+	 static long lcm(long n)
+	 {
+		 long result=1;
+		 for(int i=1;i<=n;i++)
+		 {
+			 result =(result*i)/(findgcd(result,i));
+		 }
+		 return result;
+	 }
 	public static void main(String[] args)
-	{
-		int c=0,f=0;
-		for(int i=1;i>0;i++)
- 		{
-			for(int j=1;j<=20;j++)
-			{
-				if(i%j==0)
-					c++;
-			}
-			if(c==20)
-			{
-				System.out.println(i+"  is the smallest number that can be divided by each of the numbers from 1 to 20 without any remainder");
-				f=1;
-				break;
-			}
-			c=0;
-				}
-		if(f==0)
-		{
-			System.out.println("no number is found that can be divided by each of the numbers from 1 to 20 without any remainder");
-		}
+	{		
+	long n =20;
+	System.out.println(lcm(n));
 	}
- }
+}
+// output : 232792560
