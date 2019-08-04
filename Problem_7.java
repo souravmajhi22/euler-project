@@ -1,28 +1,30 @@
 // program:10001st prime
 public class Problem_7 
 {
-	public static void main(String[] args)
+		public static boolean checkprime(int  a)
 	{
-		int c=0,freq=0;
-		for(int i=1;i>0;i++)
+		  int c=0;
+		for(long i=1;i<=(long)Math.sqrt(a);i++) 
 		{
-			for(int j=1;j<=i;j++)
-			{
-				if(i%j==0)
-				{
-					c++;
-				}
-			}
-			if(c==2)
-			{
-				freq++;
-			}
-			if(freq==10001)
-			{
-				System.out.println("  the 10001st prime number is  "+i );
-				break;
-			}
-			c=0;	
+			if(a%i==0)
+				c++;
+			if(c>1)
+				return false;
 		}
+			return true;
+	}
+	public static void main (String[]args)
+	{
+		int f=1;
+		for(int i=3;i>0;i=i+2)
+	{
+		if(checkprime(i)==true)
+		 f++;
+	if(f==10001)
+	{
+		System.out.println("10001st prime number is: "+i);
+		break;
+	}
+	}
 	}
 }
