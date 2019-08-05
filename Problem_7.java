@@ -3,28 +3,23 @@ public class Problem_7
 {
 		public static boolean checkprime(int  a)
 	{
-		  int c=0;
-		for(long i=1;i<=(long)Math.sqrt(a);i++) 
-		{
-			if(a%i==0)
-				c++;
-			if(c>1)
-				return false;
-		}
-			return true;
-	}
-	public static void main (String[]args)
-	{
-		int f=1;
-		for(int i=3;i>0;i=i+2)
-	{
-		if(checkprime(i)==true)
-		 f++;
-	if(f==10001)
-	{
-		System.out.println("10001st prime number is: "+i);
-		break;
-	}
-	}
-	}
+		  int i=3,c=2,j,t=0;
+        while(c<=10001)
+        {
+            t=0;
+            for(j=3;j<=Math.sqrt(i);j=j+2)
+            {
+                if(i%j==0)
+                {
+                    t=1;
+                    break;
+                }
+            }
+            i=i+2;
+            if(t==0)
+            c++;
+        }
+        System.out.println("The 10001st prime number is:"+(i-2));
+    }
 }
+    
