@@ -1,30 +1,21 @@
 // program:Summation of primes
 public class Problem_10
 {
-	public static boolean primecheck(long n)
-    {
-	 int counter=0;
-		for(long i=1;i<=(long)Math.sqrt(n);i++) 
-		{
-			if(n%i==0)
-				counter++;
-			if(counter>1)
-				return false;
-		}
-			return true;
-	}
-	public static void main(String args[])
-    {
-        
-        long sum = 0;
-        for(long i = 3 ;i<=2000000;i+=2) // no even number can be prime except 2
-        {
-            if(primecheck(i))
-            {
-                sum = sum +i;
-            }
-        }
-        System.out.println(sum+2); //because 2 is not included
-   }
+	 public static void main(String args[])
+  	  {
+		int i,j,c=0;long s=2;
+		        for(i=3;i<2000000;i=i+2)
+		        {
+		            for(j=3;j<=Math.sqrt(i);j=j+2)
+		            {
+		                if(i%j==0)
+		                c=1;
+		            }
+		            if(c==0)
+		            s=s+i;
+		            c=0;
+		        }
+		        System.out.println("Sum of all primes less than 2000000 is :"+s);
+	    }
 }
 //output : 142913828922
