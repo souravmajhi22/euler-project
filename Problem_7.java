@@ -1,7 +1,7 @@
 // program:10001st prime
 public class Problem_7 
 {
-		public static boolean checkprime(int  a)
+		public static void main(String args[])
 	{
 		  int i=3,c=2,j,t=0;
         while(c<=10001)
