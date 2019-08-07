@@ -8,7 +8,7 @@ public class Problem_8
 		for(int i=0;i<=number.length()-13;i++)
 			{
 				long p=1;
-				for(int j=i;j<i+13;j++)
+				for(int j=i+1;j<i+13;j++)
 				{
 					p*=Character.getNumericValue(number.charAt(j));
 				}
